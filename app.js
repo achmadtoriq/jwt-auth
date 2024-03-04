@@ -25,6 +25,9 @@ app.use(cors(corsOptions));
 app.use("/auth", authRoute);
 // app.use('/', verifyAccessToken, mainRoute)
 app.use('/', mainRoute)
+app.use('/api', (req, res) => {
+  res.send('Hello World')
+})
 
 app.get("/google/redirect", async (req, res) => {
   const { code } = req.query;
