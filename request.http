@@ -1,0 +1,47 @@
+GET http://localhost:3050/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDg0MjAxMTksImV4cCI6MTcwODQyMzcxOSwiYXVkIjoiY2xzc3BtemI1MDAwMHl1N3NuZXNnMnltcyIsImlzcyI6InRlc3QuY29tIn0.Dvb0unBdqwyM88lvgkmAjlgDZcwkihiR3_dUXvLkdEA
+
+### Gallery
+GET http://localhost:3050/gallery
+Content-Type: application/json
+
+### Not Found
+GET http://localhost:3050/retwyu
+
+### Login
+POST http://localhost:3050/auth/login
+Content-Type: application/json
+
+{
+    "email": "toriq@test.com",
+    "password": "123456"
+}
+
+### Register
+POST http://localhost:3050/auth/register
+Content-Type: application/json
+
+{
+    "name": "Achmad Toriq Afandi",
+    "email": "toriq@test.com",
+    "password": "123456"
+}
+
+### Refresh Token
+POST http://localhost:3050/auth/refresh-token
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTgzMDAyODUsImV4cCI6MTcyOTg1Nzg4NSwiYXVkIjoiMGIyMzQwOWQtNTQ4ZS00NDlkLWIxMGUtMmQzYjQ5MWJjZDFmIiwiaXNzIjoicGlja3VycGFnZS5jb20ifQ.OnNv-X02XGCEbif_y9jA9k10MySdKvnssBcj6syiChM"
+}
+
+### Verify Token
+POST http://localhost:3050/auth/verify-token
+Content-Type: application/json
+
+{
+    "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDg0OTMwODQsImV4cCI6MTcwODQ5MzI2NCwiYXVkIjoiY2xzc3BtemI1MDAwMHl1N3NuZXNnMnltcyIsImlzcyI6InRlc3QuY29tIn0.YfLyPb2nA4PfYEL8meZt6tWFY_uGUj-lHEVS0Fffn4U"
+}
+
+### Logout
+DELETE http://localhost:3050/auth/logout
